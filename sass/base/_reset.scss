@@ -1,3 +1,5 @@
+@use "../abstracts/variables";
+
 /* Core style */
 html {
 	box-sizing: border-box;
@@ -38,6 +40,10 @@ input:focus {
 	outline: none !important;
 }
 
+a {
+	display: inline-block;
+}
+
 a:active,
 a:focus {
 	outline: 0;
@@ -45,6 +51,31 @@ a:focus {
 	-moz-outline-style: none;
 }
 
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
 .wrapper {
 	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 1619px;
+	margin: 0 auto;
+}
+
+.show {
+	display: block;
+}
+
+.hidden {
+	display: none;
 }

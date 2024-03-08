@@ -1,0 +1,12 @@
+@use '../abstracts/mixin';
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 69px 0 190px;
+
+	.btn {
+		@include mixin.btn($font-size: 21px, $width: 239px, $height: 52px, $line-height: 52px)
+	}
+}

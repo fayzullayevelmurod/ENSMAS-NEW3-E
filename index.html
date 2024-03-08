@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>ENSMAS</title>
+	<!-- title logo -->
+	<link rel="icon" href="./images/icons/enmas-title-logo.svg">
+	<!-- Atyp Display font -->
+	<link rel="stylesheet" href="./fonts/atyp-display/stylesheet.css">
+	<!-- Montserrat font -->
+	<link rel="stylesheet" href="./fonts/montserrat/stylesheet.css">
 	<!-- aos css -->
 	<link rel="stylesheet" href="./libs/aos/aos.min.css">
 	<!-- swiper css -->
@@ -19,30 +25,111 @@
 
 	<div class="wrapper">
 
-		<!-- header -->
-		<header class="header">
-
-		</header>
-
 		<!-- main -->
 		<main class="main">
+			<!-- hero section -->
+			<section class="hero">
+				<div class="container">
+					<!-- header -->
+					<header class="header">
+						<a class="header-logo" href="#!">
+							<img src="images/icons/enams-logo.svg" alt="enams-logo" width="226" height="58">
+						</a>
+						<nav class="nav">
+							<ul class="nav-list">
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Главная</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Преимущества</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Характеристики</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Документация</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Где купить</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Контакты</a>
+								</li>
+							</ul>
+							<button class="btn" data-modal-target>Обратная связь</button>
+						</nav>
+					</header>
 
+					<!-- hero -->
+
+					<div class="swiper hero-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="hero-slider__boxes">
+									<div class="hero-slider__info-box">
+										<h2 class="hero-slider__info-title">NEW3-E</h2>
+										<p class="hero-slider__info">Баланс стиля и функциональности</p>
+										<a class="btn" href="#!">Подробнее</a>
+									</div>
+									<div class="hero-slider__info-img">
+										<img src="images/socket-black.png" alt="socket-white">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hero-slider__boxes">
+									<div class="hero-slider__info-box">
+										<h2 class="hero-slider__info-title">NEW3-E</h2>
+										<p class="hero-slider__info">Баланс стиля и функциональности</p>
+										<a class="btn" href="#!">Подробнее</a>
+									</div>
+									<div class="hero-slider__info-img">
+										<img src="images/socket-black.png" alt="socket-white">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 
 		<!-- footer -->
 		<footer class="footer">
-
+			salom
 		</footer>
 
 	</div>
 
+	<!-- modal -->
+	<div class="modal" data-modal>
+		<div class="modal-dialog">
+			<button class="modal-close__btn" data-modal-close>
+				<img src="./images/icons/close-icon.svg" alt="close-icon" width="27" height="27">
+			</button>
+
+			<h3 class="modal-title">Консультация специалиста ENSMAS</h3>
+			<form class="modal-form">
+				<input type="text" placeholder="ФИО">
+				<input type="text" placeholder="Телефон">
+				<input type="text" placeholder="E-mail">
+				<input type="text" placeholder="Компания">
+				<textarea placeholder="Компания"></textarea>
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+	</div>
+
 	<!-- aos js -->
-	<link rel="stylesheet" href="./libs/aos/aos.min.js">
+	<script src="./libs/aos/aos.min.js"></script>
 	<!-- swiper js -->
 	<script src="./libs/swiper/swiper.min.js"></script>
 	<!-- custom js -->
-	<script src="./libs/swiper/swiper.min.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
