@@ -13,7 +13,7 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top: 10%;
+		top: 45%;
 		left: -719px;
 		opacity: 0.43px;
 		transform: rotate(14.76deg);
@@ -27,10 +27,10 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top: 10%;
-		left: -719px;
+		bottom: -50%;
+		right: -619px;
 		opacity: 0.43px;
-		transform: rotate(14.76deg);
+		transform: rotate(180deg);
 		background: url(../../images/gradient-bg.png) no-repeat;
 		background-size: contain;
 		z-index: -1;

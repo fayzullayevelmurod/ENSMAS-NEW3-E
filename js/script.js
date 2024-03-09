@@ -20,8 +20,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		paginationClickable: true,
 		spaceBetween: 60,
 		loop: true,
-		autoplay: 3000,
-		autoplayDisableOnInteraction: false
+		speed: 900,
+	});
+
+	// characteristics-parent swiper
+	var swiper = new Swiper(".characteristics-parent__swiper", {
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		paginationClickable: true,
+		spaceBetween: 30,
+		loop: true,
+		speed: 900,
+	});
+	// characteristics swiper
+	var swiper = new Swiper(".characteristics-swiper", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		paginationClickable: true,
+		spaceBetween: 30,
+		loop: true,
+		speed: 900,
 	});
 
 	// swiper end

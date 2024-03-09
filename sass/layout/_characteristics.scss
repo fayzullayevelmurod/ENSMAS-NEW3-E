@@ -1,0 +1,122 @@
+@use '../abstracts/mixin';
+
+.characteristics {
+	padding: 177px 0;
+
+	&-swiper {
+		width: 94%;
+		margin: 0;
+	}
+
+	&-slider__box {
+		border-radius: 40px;
+		padding: 210px 61px 0 144px;
+		position: relative;
+		background: url(../../images/slider-bg.png) no-repeat;
+		background-size: cover;
+
+		&::before {
+			// content: "";
+			position: absolute;
+			top: 30%;
+			left: -2%;
+			width: 656.76px;
+			height: 223.37px;
+			filter: blur(100px);
+			border-radius: 50%;
+			opacity: 52%;
+			background: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
+		}
+
+		.title-text {
+			position: absolute;
+			top: 33px;
+			left: 180px;
+		}
+
+		.swiper-btns {
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+		}
+
+		.swiper-pagination {
+			flex-direction: row;
+			bottom: var(--swiper-pagination-bottom, 95px);
+			left: 155px;
+		}
+
+		.swiper-pagination-bullet:first-child.swiper-pagination-bullet-active {
+			border-color: #BCAB8B;
+		}
+
+		.swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active,
+		.swiper-pagination-bullet:last-child.swiper-pagination-bullet-active {
+			border-color: #D9D9D9;
+		}
+
+		.swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+			border-color: #2E2E2E;
+		}
+
+		.swiper-pagination-bullet:first-child::before {
+			background: #BCAB8B;
+		}
+
+		.swiper-pagination-bullet:nth-child(2)::before {
+			background: #D9D9D9;
+		}
+
+		.swiper-pagination-bullet:nth-child(3)::before {
+			background: #2E2E2E;
+		}
+
+		.swiper-pagination-bullet:last-child::before {
+			background: #D9D9D9;
+			border-color: #D9D9D9;
+		}
+	}
+
+
+	.swiper-slide__box {
+		display: flex;
+		align-items: start;
+		gap: 90px;
+		padding-bottom: 71px;
+
+		&>img {
+			width: 477px;
+			height: 477px;
+		}
+
+		h4 {
+			font-size: 44px;
+			font-weight: 400;
+			line-height: 44px;
+			letter-spacing: 0em;
+			padding-bottom: 60px;
+		}
+	}
+
+	&-slider__info {
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 37px;
+		letter-spacing: 0em;
+		color: #fff;
+
+		span {
+			-webkit-background-clip: text;
+			color: transparent;
+			background-image: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
+		}
+	}
+
+	&-slider__content {
+		.btn {
+			margin-top: 65px;
+			@include mixin.btn($font-size: 20px, $width: 373px, $height: 59px, $line-height: 59px)
+		}
+	}
+
+}
