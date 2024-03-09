@@ -1,7 +1,7 @@
 @use '../abstracts/mixin';
 
 .characteristics {
-	padding: 177px 0;
+	padding: 177px 0 0 0;
 
 	&-swiper {
 		width: 94%;
@@ -16,12 +16,12 @@
 		background-size: cover;
 
 		&::before {
-			// content: "";
+			content: "";
 			position: absolute;
-			top: 30%;
-			left: -2%;
+			top: -3%;
+			left: -4%;
 			width: 656.76px;
-			height: 223.37px;
+			height: 323.37px;
 			filter: blur(100px);
 			border-radius: 50%;
 			opacity: 52%;
@@ -116,6 +116,53 @@
 		.btn {
 			margin-top: 65px;
 			@include mixin.btn($font-size: 20px, $width: 373px, $height: 59px, $line-height: 59px)
+		}
+	}
+
+	&-box {
+		position: relative;
+		padding: 327px 0 315px 0;
+		background: url(../../images/charackter-bg.svg) no-repeat;
+		background-size: 111%;
+		background-position: center 155px;
+
+		img {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 300px;
+			object-fit: contain;
+		}
+
+		&__content {
+			p {
+				font-size: 20px;
+				line-height: 28px;
+				letter-spacing: 0em;
+				max-width: 407px;
+				width: 100%;
+				position: absolute;
+
+				&.first {
+					top: 25%;
+					left: 29%;
+				}
+
+				&.second {
+					top: 12%;
+					right: 22%;
+				}
+
+				&.three {
+					bottom: 15%;
+					left: 32%;
+				}
+
+				&.four {
+					bottom: 12%;
+					right: 5%;
+				}
+			}
+
 		}
 	}
 

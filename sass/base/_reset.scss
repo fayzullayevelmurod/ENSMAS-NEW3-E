@@ -17,6 +17,7 @@
 /* Core style */
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -61,7 +62,6 @@ a {
 a:active,
 a:focus {
 	outline: 0;
-	border: none;
 	-moz-outline-style: none;
 }
 

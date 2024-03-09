@@ -1,0 +1,62 @@
+.contact {
+	padding-bottom: 66px;
+	background: url(../../images/footer-bg.png) no-repeat;
+	background-size: cover;
+	background-position: bottom;
+
+	&-boxes {
+		display: flex;
+		align-items: center;
+	}
+
+	&-map {
+		iframe {
+			border-radius: 34px;
+		}
+	}
+
+	&-adres {
+		background: url(../../images/contact-bg.png) no-repeat;
+		background-size: 100% 100%;
+		display: flex;
+		align-items: center;
+		padding: 40px 40px 40px 130px;
+		margin-left: -10px;
+		position: relative;
+		z-index: 10;
+
+		&__title {
+			-webkit-background-clip: text;
+			color: transparent;
+			background-image: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
+			font-family: "Montserrat", sans-serif;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 48px;
+			letter-spacing: 0em;
+		}
+
+		&__info {
+			font-family: "Montserrat", sans-serif;
+			font-size: 26px;
+			font-weight: 600;
+			line-height: 48px;
+			letter-spacing: 0em;
+			color: #fff;
+		}
+
+		&__phone {
+			display: flex;
+			gap: 40px;
+
+			a {
+				font-family: "Montserrat", sans-serif;
+				font-size: 26px;
+				font-weight: 600;
+				line-height: 48px;
+				letter-spacing: 0em;
+				color: #fff;
+			}
+		}
+	}
+}

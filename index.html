@@ -41,22 +41,22 @@
 						<nav class="nav">
 							<ul class="nav-list">
 								<li class="nav-item">
-									<a class="nav-link" href="#!">Главная</a>
+									<a class="nav-link" href="#hero">Главная</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#!">Преимущества</a>
+									<a class="nav-link" href="#advantages">Преимущества</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#!">Характеристики</a>
+									<a class="nav-link" href="#characteristics">Характеристики</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#!">Документация</a>
+									<a class="nav-link" href="#documentation">Документация</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#!">Где купить</a>
+									<a class="nav-link" href="#where-buy">Где купить</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#!">Контакты</a>
+									<a class="nav-link" href="#contact">Контакты</a>
 								</li>
 							</ul>
 							<button class="btn" data-modal-target>Обратная связь</button>
@@ -64,7 +64,7 @@
 					</header>
 
 					<!-- hero -->
-					<div class="hero-swiper__box">
+					<div class="hero-swiper__box" id="heor">
 						<div class="swiper hero-swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -146,9 +146,9 @@
 			</section>
 
 			<!-- advantages-section -->
-			<section class="advantages">
+			<section class="advantages" id="advantages">
 				<div class="container">
-					<h2 class="title-text">Преимущества</h2>
+					<h2 class="title-text" data-aos="fade-down">Преимущества</h2>
 					<div class="advantages-boxes">
 						<div class="advantages-box">
 							<img src="images/icons/advantages-icon-1.svg" alt="advantages-icon-1">
@@ -195,10 +195,10 @@
 			</section>
 
 			<!-- characteristics-section -->
-			<section class="characteristics">
+			<section class="characteristics" id="characteristics">
 				<div class="container">
 					<div class="characteristics-slider__box">
-						<h3 class="title-text">Характеристики</h3>
+						<h3 class="title-text" data-aos="fade-right" data-aos-duration="4000">Характеристики</h3>
 						<div class="swiper characteristics-parent__swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide gold">
@@ -693,14 +693,104 @@
 							<div class="swiper-pagination"></div>
 						</div>
 					</div>
+
+					<div class="characteristics-box">
+						<div class="characteristics-box__content">
+							<p class="first" data-aos="flip-left" data-aos-duration="7000">
+								Рамка и лицевая панель изделия выполнены из огнестойкого поликарбоната
+							</p>
+							<p class="second" data-aos="flip-left" data-aos-duration="7000">
+								Качественное крепление проводников, совместно с интуитивно понятной маркировкой контактов, гарантирует
+								надёжное
+								соединение
+							</p>
+							<p class="three" data-aos="flip-left" data-aos-duration="7000">
+								Рамка и лицевая панель изделия выполнены из огнестойкого поликарбоната
+							</p>
+							<p class="four" data-aos="flip-left" data-aos-duration="7000">
+								Качественное крепление проводников, совместно с интуитивно понятной маркировкой контактов, гарантирует
+								надёжное
+								соединение
+							</p>
+						</div>
+						<img src="images/charakter-img.png" alt="characteristics img">
+					</div>
+				</div>
+			</section>
+
+			<!-- documentation-section -->
+			<section class="documentation" id="documentation">
+				<div class="container">
+					<h2 class="title-text" data-aos="fade-right" data-aos-duration="4000">Документация</h2>
+					<div class="documentation-boxes">
+						<div class="documentation-box">
+							<a class="documentation-box__download-link" href="#!">
+								Сертификаты
+							</a>
+							<img src="images/icons/download-icon.svg" alt="download-icon" width="36" height="37">
+						</div>
+						<div class="documentation-box">
+							<a class="documentation-box__download-link" href="#!">
+								Мастер Файл
+							</a>
+							<img src="images/icons/download-icon.svg" alt="download-icon" width="36" height="37">
+						</div>
+						<div class="documentation-box">
+							<a class="documentation-box__download-link" href="#!">
+								Спецификация
+							</a>
+							<img src="images/icons/download-icon.svg" alt="download-icon" width="36" height="37">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- where-buy-section -->
+			<section class="where-buy" id="where-buy">
+				<div class="container">
+					<h2 class="title-text" data-aos="fade-right" data-aos-duration="4000">Где купить</h2>
+
+					<div class="where-buy__boxes">
+						<a href="#!" class="where-buy__box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+							<img src="images/leroy-merlin.png" alt="leroy-merlin" width="135" height="82">
+						</a>
+						<a href="#!" class="where-buy__box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+							<img src="images/petrovich.png" alt="petrovich" width="163" height="35">
+						</a>
+						<a href="#!" class="where-buy__box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+							<img src="images/elevel.png" alt="elevel" width="183" height="54">
+						</a>
+						<a href="#!" class="where-buy__box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+							<img src="images/petrovich.png" alt="petrovich" width="163" height="35">
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- contact-section -->
+			<section class="contact" id="contact">
+				<div class="container">
+					<div class="contact-boxes">
+						<div class="contact-map">
+							<iframe
+								src="https://yandex.com/map-widget/v1/?ll=37.610391%2C55.737853&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I%2C&z=12.77"
+								width="629" height="641" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+						</div>
+						<div class="contact-adres">
+							<img src="images/icons/location-icon.svg" alt="location-icon" width="112" height="112">
+							<div>
+								<h6 class="contact-adres__title">Адрес</h6>
+								<p class="contact-adres__info">РФ, 115280, г. Москва, ул. Автозаводская, д 23.А, к2</p>
+								<div class="contact-adres__phone">
+									<a href="#!">+7 (495) 540 61 41</a>
+									<a href="#!">+7 (800) 222 61 41</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
-
-
-		<!-- footer -->
-		<footer class="footer">
-		</footer>
 
 	</div>
 
@@ -713,16 +803,25 @@
 
 			<h3 class="modal-title">Консультация специалиста ENSMAS</h3>
 			<form class="modal-form">
-				<input type="text" placeholder="ФИО">
-				<input type="text" placeholder="Телефон">
-				<input type="text" placeholder="E-mail">
-				<input type="text" placeholder="Компания">
+				<input type="text" name="name" placeholder="ФИО" id="name">
+				<input type="number" name="phone" placeholder="Телефон" id="phone">
+				<div class="email-box">
+					<input type="email" name="email" placeholder="E-mail" id="email">
+					<p class="validate-info">
+						<span>Введите корректный email</span>
+						<img src="images/icons/warning-icon.svg" alt="warning-icon" width="20" height="20">
+					</p>
+				</div>
+				<input type="text" name="comments" placeholder="Компания" id="comments">
 				<textarea placeholder="Компания"></textarea>
-				<button type="submit">Отправить</button>
+				<button class="send-btn btn" type="submit">Отправить</button>
+				<span class="warning-text">Заполните все поля для регистрации корректно!</span>
 			</form>
 		</div>
 	</div>
 
+	<!-- vanilla-tilt js -->
+	<script src="./js/vanilla-tilt.min.js"></script>
 	<!-- aos js -->
 	<script src="./libs/aos/aos.min.js"></script>
 	<!-- swiper js -->

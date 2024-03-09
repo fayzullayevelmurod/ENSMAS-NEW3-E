@@ -46,16 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		speed: 900,
 	});
 
-	// swiper end
 	// modal
 	const modal = document.querySelector('[data-modal]');
 	const openModalBtn = document.querySelector('[data-modal-target]');
 	const closeModalBtn = document.querySelector('[data-modal-close]');
 	function hiddenModal() {
 		modal.classList.remove('show');
+		document.body.style.overflowY = 'auto';
 	}
 	function showModal() {
 		modal.classList.add('show');
+		document.body.style.overflowY = 'hidden'
 	}
 	openModalBtn.addEventListener('click', showModal);
 	closeModalBtn.addEventListener('click', hiddenModal);
@@ -65,9 +66,41 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
-	// form validation
+	function validateEmail(email) {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	}
+
 	const modalForm = document.querySelector('.modal-form');
+	const sendBtn = modalForm.querySelector('.send-btn');
+	const emailField = document.querySelector('#email');
+	const emailValidateWarningText = document.querySelector('.validate-info');
+	const warningText = document.querySelector('.warning-text');
+
 	modalForm.addEventListener('submit', (e) => {
 		e.preventDefault();
-	})
+
+		const formFields = ['name', 'phone', 'email', 'comments'];
+
+		for (const fieldId of formFields) {
+			const field = document.getElementById(fieldId);
+			const value = field.value.trim();
+
+			if (fieldId === 'email' && !validateEmail(value)) {
+				emailField.classList.add('warning');
+				emailValidateWarningText.classList.add('show');
+				sendBtn.classList.add('warning');
+				warningText.classList.add('active');
+			} else if (value !== '') {
+				warningText.classList.add('active');
+				warningText.textContent = 'Спасибо за обращение!';
+				emailField.classList.remove('warning');
+				emailValidateWarningText.classList.remove('show');
+				sendBtn.classList.remove('warning');
+				field.value = '';
+			}
+		}
+	});
+
+
 });
