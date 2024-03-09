@@ -2,7 +2,7 @@
 	&-pagination {
 		display: flex;
 		flex-direction: column;
-		gap: 21px;
+		gap: 10px;
 	}
 
 	&-pagination-bullet {
@@ -29,5 +29,38 @@
 			background: #D9D9D9;
 			border-radius: 50%;
 		}
+
 	}
+
+	.swiper-pagination-vertical.swiper-pagination-bullets,
+	.swiper-vertical>.swiper-pagination-bullets {
+		top: 95px;
+		right: 0;
+	}
+
+	&-button-next:after,
+	&-button-prev:after {
+		display: none;
+	}
+
+	&-button-prev {
+		margin-bottom: 48px;
+	}
+
+	&-button-next,
+	&-button-prev {
+		border-radius: 50%;
+		border: 1px solid #fff;
+		width: 86px;
+		height: 86px;
+		position: initial;
+	}
+
+	&-btns {
+		position: absolute;
+		right: -38px;
+		bottom: 55px;
+		z-index: 10;
+	}
+
 }

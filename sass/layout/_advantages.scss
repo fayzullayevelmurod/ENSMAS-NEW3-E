@@ -1,0 +1,32 @@
+.advantages {
+	padding-bottom: 177px;
+	position: relative;
+	z-index: 10;
+
+	.title-text {
+		text-align: center;
+		margin-bottom: 101px;
+	}
+
+	&-boxes {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 82px;
+	}
+
+	&-box {
+		color: #F2F2F2;
+		flex: 1 0 auto;
+
+		&__info {
+			max-width: 346px;
+			width: 100%;
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 30px;
+			letter-spacing: 0em;
+			margin-top: 26px;
+		}
+	}
+}

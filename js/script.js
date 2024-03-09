@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+	// AOS
+	AOS.init();
+
 	// responsive navbar
 
 	// swiper start

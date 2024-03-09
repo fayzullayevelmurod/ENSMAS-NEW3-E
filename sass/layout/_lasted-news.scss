@@ -1,0 +1,70 @@
+@use '../abstracts/mixin';
+
+.lasted-news {
+	padding-top: 200px;
+	text-align: center;
+	color: #F2F2F2;
+	padding-bottom: 140px;
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 10%;
+		left: -719px;
+		opacity: 0.43px;
+		transform: rotate(14.76deg);
+		background: url(../../images/gradient-bg.png) no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 10%;
+		left: -719px;
+		opacity: 0.43px;
+		transform: rotate(14.76deg);
+		background: url(../../images/gradient-bg.png) no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+
+	.title-text {
+		margin-bottom: 46px;
+	}
+
+	&__info {
+		font-size: 29px;
+		line-height: 43px;
+		letter-spacing: 0em;
+
+		span {
+			-webkit-background-clip: text;
+			color: transparent;
+			background-image: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
+		}
+	}
+
+	&__btns {
+		margin-top: 81px;
+		display: flex;
+		gap: 42px;
+		justify-content: center;
+
+		a {
+			@include mixin.btn($font-size: 23px, $width: 327px, $height: 68px, $line-height: 68px);
+		}
+
+		a:nth-child(2) {
+			@include mixin.btn($width: 624px);
+		}
+	}
+
+}
