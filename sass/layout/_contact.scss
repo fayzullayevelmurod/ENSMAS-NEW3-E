@@ -1,6 +1,5 @@
 .contact {
-	padding-bottom: 66px;
-	background: url(../../images/footer-bg.png) no-repeat;
+	padding-bottom: 4.125rem;
 	background-size: cover;
 	background-position: bottom;
 
@@ -10,53 +9,134 @@
 	}
 
 	&-map {
+		width: 100%;
+		max-width: 39.3125rem;
+		height: 40.0625rem;
+
 		iframe {
-			border-radius: 34px;
+			width: 100%;
+			height: 100%;
+			border-radius: 2.125rem;
 		}
 	}
 
 	&-adres {
-		background: url(../../images/contact-bg.png) no-repeat;
+		background: url(../../images/contact-bg.webp) no-repeat;
 		background-size: 100% 100%;
 		display: flex;
 		align-items: center;
-		padding: 40px 40px 40px 130px;
-		margin-left: -10px;
+		padding: 2.5rem 2.5rem 2.5rem 8.125rem;
+		margin-left: -0.625rem;
 		position: relative;
 		z-index: 10;
+		width: 100%;
 
 		&__title {
 			-webkit-background-clip: text;
 			color: transparent;
 			background-image: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
 			font-family: "Montserrat", sans-serif;
-			font-size: 40px;
+			font-size: 2.5rem;
 			font-weight: 700;
-			line-height: 48px;
+			line-height: 3rem;
 			letter-spacing: 0em;
 		}
 
 		&__info {
 			font-family: "Montserrat", sans-serif;
-			font-size: 26px;
+			font-size: 1.625rem;
 			font-weight: 600;
-			line-height: 48px;
+			line-height: 3rem;
 			letter-spacing: 0em;
 			color: #fff;
+			white-space: nowrap;
 		}
 
 		&__phone {
 			display: flex;
-			gap: 40px;
+			gap: 2.5rem;
 
 			a {
 				font-family: "Montserrat", sans-serif;
-				font-size: 26px;
+				font-size: 1.625rem;
 				font-weight: 600;
-				line-height: 48px;
+				line-height: 3rem;
 				letter-spacing: 0em;
 				color: #fff;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 90rem) {
+	.contact {
+		&-map {
+			max-width: 26.0625rem;
+			height: 26.5625rem;
+		}
+
+		&-adres__title {
+			font-size: 1.75rem;
+		}
+
+		&-adres__info {
+			font-size: 1.3125rem;
+			white-space: initial;
+		}
+
+		&-adres__phone a {
+			font-size: 1.6875rem;
+		}
+	}
+}
+
+@media screen and (max-width: 48rem) {
+	.contact {
+		&-boxes {
+			flex-wrap: wrap;
+			gap: 0;
+		}
+
+		&-map {
+			max-width: 100%;
+		}
+
+		&-adres {
+			background: url(../../images/adres-media-bg.png) no-repeat;
+			width: 100%;
+			background-size: 100% 100%;
+			padding: 4.0625rem 2.5rem 1.625rem 2.125rem;
+			gap: 2.1875rem;
+			margin-left: 0;
+			margin-top: -0.625rem;
+
+			&__title {
+				font-size: 1.25rem;
+				line-height: 1.375rem;
+				margin-bottom: 0.625rem;
+			}
+
+			img {
+				width: 3.875rem;
+				height: 3.875rem;
+			}
+
+			&__info {
+				font-size: 0.6875rem;
+				line-height: 0.75rem;
+			}
+
+			&__phone {
+				gap: 1.0625rem;
+			}
+
+			&__phone a {
+				margin-top: 1.25rem;
+				font-size: 0.6875rem;
+				line-height: 0.75rem;
+				white-space: nowrap;
+			}
+		}
+
 	}
 }

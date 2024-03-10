@@ -11,9 +11,15 @@ body {
 
 .title-text {
 	font-family: 'Atyp Display', sans-serif;
-	font-size: 60px;
+	font-size: 3.75rem;
 	font-weight: 400;
-	line-height: 60px;
+	line-height: 3.75rem;
 	letter-spacing: 0em;
 	color: #fff;
+}
+
+@media screen and (max-width: 30rem) {
+	body {
+		background: #010612;
+	}
 }

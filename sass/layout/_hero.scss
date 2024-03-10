@@ -1,21 +1,21 @@
 @use "../abstracts/mixin";
 
 .hero {
-	background-image: url(../../images/hero-bg.png);
+	background-image: url(../../images/hero-bg.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	padding-bottom: 145px;
+	padding-bottom: 9.0625rem;
 	z-index: 1;
 
 	&::before {
 		content: "";
 		position: absolute;
-		bottom: -65px;
+		bottom: -4.0625rem;
 		left: 0;
 		width: 100%;
-		height: 300px;
-		background-image: url(../../images/hero-shadow-bg.png);
+		height: 18.75rem;
+		background-image: url(../../images/hero-shadow-bg.webp);
 		z-index: -1;
 	}
 
@@ -24,7 +24,7 @@
 	}
 
 	.swiper-wrapper {
-		height: 457px;
+		height: 28.5625rem;
 	}
 
 	&-slider__boxes {
@@ -34,10 +34,10 @@
 	}
 
 	&-slider__info-title {
-		margin: 10px 0 14px 0;
-		font-size: 215px;
+		margin: 0.625rem 0 0.875rem 0;
+		font-size: 13.4375rem;
 		font-weight: 400;
-		line-height: 215px;
+		line-height: 13.4375rem;
 		letter-spacing: 0em;
 		-webkit-background-clip: text;
 		color: transparent;
@@ -45,17 +45,107 @@
 	}
 
 	&-slider__info {
-		font-size: 35px;
-		line-height: 35px;
+		font-size: 2.1875rem;
+		line-height: 2.1875rem;
 		letter-spacing: 0em;
 	}
 
 	&-slider__info-box .btn {
-		margin-top: 55px;
-		@include mixin.btn($font-size: 21px, $width: 334px, $height: 73px, $line-height: 73px)
+		margin-top: 3.4375rem;
+		@include mixin.btn($font-size: 1.3125rem, $width: 20.875rem, $height: 4.5625rem, $line-height: 4.5625rem)
 	}
 }
 
 .relative {
 	position: relative;
+}
+
+@media screen and (max-width: 90rem) {
+	.hero {
+		padding-bottom: 6.25rem;
+
+		&-slider__info-img {
+			max-width: 25rem;
+			width: 100%;
+			height: 25rem;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&-slider__info-title {
+			font-size: 9.75rem;
+			line-height: 9.75rem;
+		}
+
+		&-slider__boxes {
+			align-items: center;
+		}
+
+		&-slider__info-info {
+			font-size: 2.0625rem;
+			line-height: 2.0625rem;
+			margin: 0;
+		}
+
+		&-slider__info-box .btn {
+			margin-top: 2.3125rem;
+			@include mixin.btn($font-size: 1.125rem, $width: 16.75rem, $height: 3.625rem, $line-height: 3.625rem)
+		}
+	}
+}
+
+@media screen and (max-width: 48rem) {
+	.hero {
+		text-align: center;
+
+		&-slider__info-title {
+			font-size: 6.0625rem;
+			line-height: 6.0625rem;
+		}
+
+		&-slider__boxes {
+			flex-direction: column;
+			max-width: 100%;
+			gap: 2.75rem;
+		}
+
+		&-slider__info-box .btn {
+			margin-top: 2.25rem;
+			@include mixin.btn($font-size: 0.875rem, $width: 14.1875rem, $height: 2.5rem, $line-height: 2.5rem)
+		}
+
+		.swiper-wrapper {
+			height: 66vh;
+		}
+
+		&-slider__info-img {
+			order: -1;
+			max-width: 15.875rem;
+			height: 15.875rem;
+		}
+
+		.swiper-btns {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 30rem) {
+	.hero {
+		.swiper-wrapper {
+			height: 70vh;
+		}
+
+		&-slider__info {
+			font-size: 1.1875rem;
+		}
+
+		.swiper .swiper-pagination-vertical.swiper-pagination-bullets,
+		.swiper .swiper-vertical>.swiper-pagination-bullets {
+			top: 8rem;
+		}
+	}
 }

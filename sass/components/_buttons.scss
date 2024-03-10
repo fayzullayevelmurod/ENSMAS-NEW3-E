@@ -8,7 +8,7 @@
 	letter-spacing: 0em;
 	text-align: center;
 	background: variables.$btn-gradient;
-	border-radius: 12px;
+	border-radius: 0.75rem;
 	cursor: pointer;
 	transition: box-shadow 0.2s linear;
 	color: #fff;
@@ -17,5 +17,11 @@
 }
 
 .btn:hover {
-	box-shadow: 2px -1px 35.599998474121094px 0px #FFFFFF8C;
+	box-shadow: 0.125rem -0.0625rem 2.2249999046325684rem 0rem #FFFFFF8C;
+}
+
+@media screen and (max-width: 48rem) {
+	.btn {
+		border-radius: 0.5rem;
+	}
 }

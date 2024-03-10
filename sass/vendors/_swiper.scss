@@ -2,15 +2,15 @@
 	&-pagination {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 0.625rem;
 	}
 
 	&-pagination-bullet {
 		opacity: 1;
 		position: relative;
-		width: 21px;
-		height: 21px;
-		border: 1px solid transparent;
+		width: 1.3125rem;
+		height: 1.3125rem;
+		border: 0.0625rem solid transparent;
 		border-radius: 50%;
 		background: transparent;
 
@@ -24,8 +24,8 @@
 			top: 52%;
 			left: 49%;
 			transform: translate(-40%, -58%);
-			width: 7px;
-			height: 7px;
+			width: 0.4375rem;
+			height: 0.4375rem;
 			background: #D9D9D9;
 			border-radius: 50%;
 		}
@@ -34,7 +34,7 @@
 
 	.swiper-pagination-vertical.swiper-pagination-bullets,
 	.swiper-vertical>.swiper-pagination-bullets {
-		top: 95px;
+		top: 5.9375rem;
 		right: 0;
 	}
 
@@ -44,23 +44,46 @@
 	}
 
 	&-button-prev {
-		margin-bottom: 48px;
+		margin-bottom: 3rem;
 	}
 
 	&-button-next,
 	&-button-prev {
 		border-radius: 50%;
-		border: 1px solid #fff;
-		width: 86px;
-		height: 86px;
+		border: 0.0625rem solid #fff;
+		width: 5.375rem;
+		height: 5.375rem;
 		position: initial;
 	}
 
 	&-btns {
 		position: absolute;
-		right: -38px;
-		bottom: 55px;
+		right: -2.375rem;
+		bottom: 3.4375rem;
 		z-index: 10;
 	}
+}
 
+@media screen and (max-width: 105.625rem) {
+	.swiper-btns {
+		right: -1.75rem;
+	}
+}
+
+@media screen and (max-width: 90rem) {
+	.swiper {
+		&-btns {
+			bottom: 5rem;
+		}
+
+		&-button-next,
+		&-button-prev {
+			width: 4.5625rem;
+			height: 4.5625rem;
+		}
+
+		&-button-prev {
+			margin-bottom: 2.6875rem;
+		}
+	}
 }

@@ -1,24 +1,28 @@
 .where-buy {
-	padding-bottom: 160px;
+	padding-bottom: 10rem;
 
 	.title-text {
 		text-align: center;
-		margin-bottom: 61px;
+		margin-bottom: 3.8125rem;
 	}
 
 	&__boxes {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
-		gap: 11px;
+		display: flex;
+		gap: 0.6875rem;
+
+		&::-webkit-scrollbar-thumb {
+			height: 0;
+			background: none;
+		}
 	}
 
 	&__box {
-		// background: #B9B9B91A;
-		border-radius: 40px;
-		border: 1px solid;
-		// border-image-source: linear-gradient(227.68deg, #FFFFFF 2.38%, rgba(255, 255, 255, 0) 70.23%);
+		min-width: 18.8125rem;
+		width: 100%;
+		border-radius: 2.5rem;
+		border: 0.0625rem solid;
 		display: flex;
-		height: 146px;
+		height: 9.125rem;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -27,9 +31,35 @@
 		overflow: hidden;
 		color: rgba(255, 255, 255, 0.4);
 		background-color: #B9B9B91A;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
 		border-left: none;
 		-webkit-backdrop-filter: blur(0.5);
 		backdrop-filter: blur(0.5);
+	}
+}
+
+@media screen and (max-width: 90rem) {
+	.where-buy {
+		padding-bottom: 8.5625rem;
+	}
+}
+
+@media screen and (max-width: 48rem) {
+	.where-buy {
+		padding-bottom: 6.0625rem;
+
+		.title-text {
+			margin-bottom: 1.9375rem;
+		}
+
+		&__boxes {
+			margin-right: -1.375rem;
+			overflow-x: auto;
+		}
+
+		&__box {
+			min-width: 16.125rem;
+			height: 7.75rem;
+		}
 	}
 }

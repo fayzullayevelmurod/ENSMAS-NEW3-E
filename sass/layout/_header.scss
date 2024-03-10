@@ -4,9 +4,63 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 69px 0 190px;
+	padding: 4.3125rem 0 11.875rem;
 
 	.btn {
-		@include mixin.btn($font-size: 21px, $width: 239px, $height: 52px, $line-height: 52px)
+		@include mixin.btn($font-size: 1.3125rem, $width: 14.9375rem, $height: 3.25rem, $line-height: 3.25rem)
+	}
+
+	.menu-bars {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 90rem) {
+	.header {
+		padding-bottom: 5.9375rem;
+
+		&-logo {
+			img {
+				width: 9.75rem;
+				height: 2.5rem;
+			}
+		}
+
+		.btn {
+			@include mixin.btn($font-size: 1.0625rem, $width: 12.1875rem, $height: 2.625rem, $line-height: 2.625rem)
+		}
+	}
+}
+
+@media screen and (max-width: 48rem) {
+	.header {
+		padding-top: 1.5625rem;
+
+		&-logo {
+			position: relative;
+			z-index: 101;
+		}
+
+		.menu-bars {
+			display: block;
+			position: relative;
+			z-index: 101;
+
+			span {
+				display: block;
+				margin-bottom: 0.25rem;
+				background: #fff;
+				width: 3.25rem;
+				height: 0.125rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&.active span {
+				background: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
+			}
+		}
 	}
 }

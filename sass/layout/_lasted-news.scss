@@ -1,10 +1,10 @@
 @use '../abstracts/mixin';
 
 .lasted-news {
-	padding-top: 200px;
+	padding-top: 12.5rem;
 	text-align: center;
 	color: #F2F2F2;
-	padding-bottom: 140px;
+	padding-bottom: 8.75rem;
 	position: relative;
 	z-index: 1;
 
@@ -14,10 +14,10 @@
 		width: 100%;
 		height: 100%;
 		top: 45%;
-		left: -719px;
-		opacity: 0.43px;
+		left: -44.9375rem;
+		opacity: 0.026875rem;
 		transform: rotate(14.76deg);
-		background: url(../../images/gradient-bg.png) no-repeat;
+		background: url(../../images/gradient-bg.webp) no-repeat;
 		background-size: contain;
 		z-index: -1;
 	}
@@ -28,21 +28,21 @@
 		width: 100%;
 		height: 100%;
 		bottom: -50%;
-		right: -619px;
-		opacity: 0.43px;
+		right: -38.6875rem;
+		opacity: 0.026875rem;
 		transform: rotate(180deg);
-		background: url(../../images/gradient-bg.png) no-repeat;
+		background: url(../../images/gradient-bg.webp) no-repeat;
 		background-size: contain;
 		z-index: -1;
 	}
 
 	.title-text {
-		margin-bottom: 46px;
+		margin-bottom: 2.875rem;
 	}
 
 	&__info {
-		font-size: 29px;
-		line-height: 43px;
+		font-size: 1.8125rem;
+		line-height: 2.6875rem;
 		letter-spacing: 0em;
 
 		span {
@@ -53,18 +53,103 @@
 	}
 
 	&__btns {
-		margin-top: 81px;
+		margin-top: 5.0625rem;
 		display: flex;
-		gap: 42px;
+		gap: 2.625rem;
 		justify-content: center;
 
 		a {
-			@include mixin.btn($font-size: 23px, $width: 327px, $height: 68px, $line-height: 68px);
+			@include mixin.btn($font-size: 1.4375rem, $width: 20.4375rem, $height: 4.25rem, $line-height: 4.25rem);
 		}
 
 		a:nth-child(2) {
-			@include mixin.btn($width: 624px);
+			@include mixin.btn($width: 39rem);
 		}
 	}
 
+}
+
+@media screen and (max-width: 90rem) {
+	.lasted-news {
+		padding-bottom: 5.75rem;
+
+		.title-text {
+			margin-bottom: 3.8125rem;
+		}
+
+		&-news__info {
+			font-size: 1.625rem;
+			line-height: 2.4375rem;
+		}
+
+		&__btns {
+			margin-top: 3.8125rem;
+			gap: 2.375rem;
+
+			a {
+				@include mixin.btn($font-size: 1.1875rem, $width: 18.75rem, $height: 3.75rem, $line-height: 3.75rem);
+			}
+
+			a:nth-child(2) {
+				@include mixin.btn($width: 32.3125rem);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 48rem) {
+	.lasted-news {
+		padding-top: 1.25rem;
+		padding-bottom: 4.1875rem;
+
+		&::before {
+			width: 134%;
+			height: 100%;
+			top: 122%;
+			left: -64%;
+			filter: blur(3.125rem);
+			transform: rotate(0);
+		}
+
+		&::after {
+			width: 144%;
+			height: 125%;
+			bottom: -164%;
+			right: -67%;
+			filter: blur(2.5rem);
+		}
+
+		.title-text {
+			margin-bottom: 1.25rem;
+		}
+
+		&__info {
+			max-width: 16.6875rem;
+			width: 100%;
+			margin: 0 auto 0.9375rem auto;
+			font-size: 0.875rem;
+			line-height: 1.1875rem;
+		}
+
+		&__btns {
+			flex-wrap: wrap;
+			gap: 0.4375rem;
+			margin-top: 2.4375rem;
+
+			.btn {
+				width: 49%;
+				font-size: 0.875rem;
+				line-height: 2.875rem;
+				height: 2.875rem;
+
+				&:nth-child(2) {
+					order: 1;
+					font-size: 0.875rem;
+					width: 100%;
+					line-height: 2.875rem;
+					height: 2.875rem;
+				}
+			}
+		}
+	}
 }

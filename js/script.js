@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	AOS.init();
 
 	// responsive navbar
-
+	const barsBtn = document.querySelector('.menu-bars');
+	const nav = document.querySelector('.nav');
+	barsBtn.addEventListener('click', (e) => {
+		nav.classList.toggle('active');
+		barsBtn.classList.toggle('active')
+	})
 	// swiper start
 
 	// hero swiper
