@@ -372,6 +372,7 @@ body {
     left: 0;
     width: 100%;
     height: 26%;
+    z-index: -1;
     filter: blur(6.25rem);
     opacity: 55%;
     background: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
@@ -392,7 +393,7 @@ body {
   .nav-list {
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1.2rem;
     padding-top: 7.5rem;
     margin: 0;
   }
@@ -531,6 +532,21 @@ body {
   .hero .swiper .swiper-pagination-vertical.swiper-pagination-bullets,
   .hero .swiper .swiper-vertical > .swiper-pagination-bullets {
     top: 8rem;
+  }
+  .hero .swiper-horizontal > .swiper-pagination-bullets,
+  .hero .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .hero .swiper-pagination-custom,
+  .hero .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 65%);
+    top: var(--swiper-pagination-top, auto);
+    right: -92%;
+    width: 100%;
+    left: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero-slider__info-title {
+    font-size: 5.0625rem;
   }
 }
 .lasted-news {
@@ -674,6 +690,11 @@ body {
     width: 100%;
     line-height: 2.875rem;
     height: 2.875rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .lasted-news__btns .btn {
+    width: 48.5%;
   }
 }
 .advantages {
@@ -1048,16 +1069,16 @@ body {
     justify-content: center;
   }
   .characteristics .characteristics-slider__box .swiper-pagination {
-    bottom: var(--swiper-pagination-bottom, 20.5rem);
     left: 33%;
+    bottom: var(--swiper-pagination-bottom, 20.2rem);
   }
   .characteristics .characteristics-slider__box .swiper-pagination-bullet::before {
-    left: 50%;
+    left: 48%;
   }
   .characteristics .characteristics-slider__box .swiper-btns {
     display: flex;
     width: 100%;
-    top: 25%;
+    top: 17%;
     transform: translateY(-50%);
     justify-content: space-between;
     height: fit-content;
@@ -1066,6 +1087,7 @@ body {
   .characteristics .swiper-button-prev {
     width: 1.75rem;
     height: 1.75rem;
+    margin: 0;
   }
   .characteristics .swiper-button-next img,
   .characteristics .swiper-button-prev img {
@@ -1107,6 +1129,21 @@ body {
   }
   .characteristics .characteristics-box img {
     padding: 0;
+  }
+}
+@media screen and (max-width: 422px) {
+  .characteristics-slider__box .swiper-pagination {
+    bottom: var(--swiper-pagination-bottom, 22rem) !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .characteristics-slider__box .swiper-pagination {
+    bottom: var(--swiper-pagination-bottom, 21rem) !important;
+  }
+}
+@media screen and (max-width: 395px) {
+  .characteristics-slider__box .swiper-pagination {
+    bottom: var(--swiper-pagination-bottom, 22rem) !important;
   }
 }
 .documentation {

@@ -147,5 +147,22 @@
 		.swiper .swiper-vertical>.swiper-pagination-bullets {
 			top: 8rem;
 		}
+
+		.swiper-horizontal>.swiper-pagination-bullets,
+		.swiper-pagination-bullets.swiper-pagination-horizontal,
+		.swiper-pagination-custom,
+		.swiper-pagination-fraction {
+			bottom: var(--swiper-pagination-bottom, 65%);
+			top: var(--swiper-pagination-top, auto);
+			right: -92%;
+			width: 100%;
+			left: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.hero-slider__info-title {
+		font-size: 5.0625rem;
 	}
 }

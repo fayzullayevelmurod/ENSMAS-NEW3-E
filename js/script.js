@@ -18,13 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
+		breakpoints: {
+			480: {
+				direction: "vertical",
+			},
+			0: {
+				direction: "horizontal",
+			}
+		},
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		paginationClickable: true,
+		// mousewheel: false,
+		// keyboard: false,
 		spaceBetween: 60,
-		loop: true,
+		loop: false,
 		speed: 900,
 	});
 
@@ -129,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			emailValidateWarningText.classList.remove('warning');
 		} else {
 			emailValidateWarningText.classList.add('warning');
-			// emailValidateWarningText.textContent = 'Введите корректный email.';
 		}
 	});
 
