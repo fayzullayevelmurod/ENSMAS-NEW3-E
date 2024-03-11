@@ -47,37 +47,67 @@
 			width: fit-content;
 		}
 
-		.swiper-pagination-bullet:first-child.swiper-pagination-bullet-active {
+		.swiper-pagination-bullet:first-child.active {
 			border-color: #BCAB8B;
 		}
 
-		.swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active,
-		.swiper-pagination-bullet:last-child.swiper-pagination-bullet-active {
-			border-color: #D9D9D9;
+		.img-wrapper {
+
+			img {
+				display: none;
+				animation: fade 0.3s linear;
+
+				&.active {
+					display: block;
+				}
+			}
 		}
 
-		.swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
-			border-color: #2E2E2E;
+		@keyframes fade {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
 		}
 
-		.swiper-pagination-bullet:first-child::before {
-			background: #BCAB8B;
+		.swiper-pagination-bullet {
+
+			&:nth-child(2).active,
+			&:last-child.active {
+				border-color: #D9D9D9;
+			}
+
+			&:nth-child(3).active {
+				border-color: #2E2E2E;
+			}
+
+			&:first-child::before {
+				background: #BCAB8B;
+			}
+
+			&:nth-child(2)::before {
+				background: #D9D9D9;
+			}
+
+			&:nth-child(3)::before {
+				background: #2E2E2E;
+			}
+
+			&:last-child::before {
+				background: #D9D9D9;
+				border-color: #D9D9D9;
+			}
 		}
 
-		.swiper-pagination-bullet:nth-child(2)::before {
-			background: #D9D9D9;
-		}
-
-		.swiper-pagination-bullet:nth-child(3)::before {
-			background: #2E2E2E;
-		}
-
-		.swiper-pagination-bullet:last-child::before {
-			background: #D9D9D9;
-			border-color: #D9D9D9;
-		}
 	}
 
+	.slider-img {
+		width: 29.8125rem;
+		height: 29.8125rem;
+	}
 
 	.swiper-slide__box {
 		display: flex;
@@ -218,7 +248,7 @@
 			}
 		}
 
-		.swiper-slide__box>img {
+		.slider-img {
 			max-width: 25rem;
 			width: 100%;
 			height: 25rem;
@@ -352,7 +382,7 @@
 			gap: 3.375rem;
 		}
 
-		.swiper-slide__box>img {
+		.slider-img {
 			width: 13.125rem;
 			height: 13.125rem;
 		}
@@ -379,9 +409,10 @@
 		.characteristics-slider__box .swiper-btns {
 			display: flex;
 			width: 100%;
-			top: 50%;
+			top: 25%;
 			transform: translateY(-50%);
 			justify-content: space-between;
+			height: fit-content;
 		}
 
 		.swiper-button-next,

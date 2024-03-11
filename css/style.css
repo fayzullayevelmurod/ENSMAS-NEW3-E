@@ -777,14 +777,28 @@ body {
   left: 9.6875rem;
   width: fit-content;
 }
-.characteristics-slider__box .swiper-pagination-bullet:first-child.swiper-pagination-bullet-active {
+.characteristics-slider__box .swiper-pagination-bullet:first-child.active {
   border-color: #BCAB8B;
 }
-.characteristics-slider__box .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active,
-.characteristics-slider__box .swiper-pagination-bullet:last-child.swiper-pagination-bullet-active {
+.characteristics-slider__box .img-wrapper img {
+  display: none;
+  animation: fade 0.3s linear;
+}
+.characteristics-slider__box .img-wrapper img.active {
+  display: block;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.characteristics-slider__box .swiper-pagination-bullet:nth-child(2).active, .characteristics-slider__box .swiper-pagination-bullet:last-child.active {
   border-color: #D9D9D9;
 }
-.characteristics-slider__box .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+.characteristics-slider__box .swiper-pagination-bullet:nth-child(3).active {
   border-color: #2E2E2E;
 }
 .characteristics-slider__box .swiper-pagination-bullet:first-child::before {
@@ -799,6 +813,10 @@ body {
 .characteristics-slider__box .swiper-pagination-bullet:last-child::before {
   background: #D9D9D9;
   border-color: #D9D9D9;
+}
+.characteristics .slider-img {
+  width: 29.8125rem;
+  height: 29.8125rem;
 }
 .characteristics .swiper-slide__box {
   display: flex;
@@ -911,7 +929,7 @@ body {
     width: 1.1875rem;
     height: 0.625rem;
   }
-  .characteristics .swiper-slide__box > img {
+  .characteristics .slider-img {
     max-width: 25rem;
     width: 100%;
     height: 25rem;
@@ -1016,7 +1034,7 @@ body {
     flex-direction: column;
     gap: 3.375rem;
   }
-  .characteristics .swiper-slide__box > img {
+  .characteristics .slider-img {
     width: 13.125rem;
     height: 13.125rem;
   }
@@ -1039,9 +1057,10 @@ body {
   .characteristics .characteristics-slider__box .swiper-btns {
     display: flex;
     width: 100%;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
     justify-content: space-between;
+    height: fit-content;
   }
   .characteristics .swiper-button-next,
   .characteristics .swiper-button-prev {
