@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	function validateEmail(email) {
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		const emailRegex = /^[^\s@]+@[^\s@]+\.(?:com|net|org|ru)$/i;
 		return emailRegex.test(email);
 	}
 
@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				warningText.textContent = 'Спасибо за обращение!';
 				emailValidateWarningText.classList.remove('warning');
 				field.value = '';
+				document.querySelector('textarea').value = '';
 			}
 		}
 	})
