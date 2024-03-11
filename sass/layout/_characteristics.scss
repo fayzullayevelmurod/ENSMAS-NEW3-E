@@ -44,6 +44,7 @@
 			flex-direction: row;
 			bottom: var(--swiper-pagination-bottom, 5.9375rem);
 			left: 9.6875rem;
+			width: fit-content;
 		}
 
 		.swiper-pagination-bullet:first-child.swiper-pagination-bullet-active {

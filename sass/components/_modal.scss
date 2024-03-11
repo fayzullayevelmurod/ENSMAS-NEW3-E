@@ -6,7 +6,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	transition: all 0.1s linear;
 	// transform: scale(0);
 	display: none;
 	z-index: 999;
@@ -100,6 +99,12 @@
 		color: #FC403A;
 	}
 
+	#name.warning::placeholder,
+	#phone.warning::placeholder,
+	#company.warning::placeholder {
+		color: #FC403A;
+	}
+
 	textarea {
 		height: 15.6875rem;
 		resize: none;
@@ -138,7 +143,7 @@
 				display: inline-block;
 			}
 
-			&.show {
+			&.warning {
 				display: flex;
 			}
 		}
@@ -167,7 +172,7 @@
 		text-align: center;
 	}
 
-	.warning-text.active {
+	.warning-text.warning {
 		display: block;
 	}
 }

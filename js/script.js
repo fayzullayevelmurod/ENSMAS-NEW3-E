@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
 		paginationClickable: true,
 		spaceBetween: 30,
 		loop: true,
@@ -41,10 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	// characteristics swiper
 	var swiper = new Swiper(".characteristics-swiper", {
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
 		paginationClickable: true,
 		spaceBetween: 30,
 		loop: true,
@@ -71,6 +71,50 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
+	// // validation
+	// function validateEmail(email) {
+	// 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	// 	return emailRegex.test(email);
+	// }
+
+	// const modalForm = document.querySelector('.modal-form');
+	// const sendBtn = modalForm.querySelector('.send-btn');
+	// const emailField = document.querySelector('#email');
+	// const emailValidateWarningText = document.querySelector('.validate-info');
+	// const warningText = document.querySelector('.warning-text');
+
+	// modalForm.addEventListener('submit', (e) => {
+	// 	e.preventDefault();
+
+	// 	const formFields = ['name', 'phone', 'email', 'comments'];
+
+	// 	for (const fieldId of formFields) {
+	// 		const field = document.getElementById(fieldId);
+	// 		const value = field.value.trim();
+
+	// 		if (value === '') {
+	// 			field.classList.add('warning')
+	// 		} else {
+	// 			field.classList.remove('warning')
+	// 		}
+
+	// 		if (fieldId === 'email' && !validateEmail(value)) {
+	// 			emailField.classList.add('warning');
+	// 			emailValidateWarningText.classList.add('show');
+	// 			sendBtn.classList.add('warning');
+	// 			warningText.classList.add('active');
+	// 		} else if (value !== '') {
+	// 			warningText.classList.add('active');
+	// 			warningText.textContent = 'Спасибо за обращение!';
+	// 			emailField.classList.remove('warning');
+	// 			emailValidateWarningText.classList.remove('show');
+	// 			sendBtn.classList.remove('warning');
+	// 			field.value = '';
+	// 		}
+	// 	}
+	// });
+
+
 	function validateEmail(email) {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(email);
@@ -80,32 +124,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	const sendBtn = modalForm.querySelector('.send-btn');
 	const emailField = document.querySelector('#email');
 	const emailValidateWarningText = document.querySelector('.validate-info');
-	const warningText = document.querySelector('.warning-text');
+	const warningText = document.querySelector('.warning-text')
 
 	modalForm.addEventListener('submit', (e) => {
 		e.preventDefault();
 
-		const formFields = ['name', 'phone', 'email', 'comments'];
+		const formFields = ['name', 'phone', 'email', 'company'];
+		const emailValue = emailField.value.trim();
 
-		for (const fieldId of formFields) {
-			const field = document.getElementById(fieldId);
+		for (let i = 0; i < formFields.length; i++) {
+			const field = document.getElementById(formFields[i]);
 			const value = field.value.trim();
 
-			if (fieldId === 'email' && !validateEmail(value)) {
-				emailField.classList.add('warning');
-				emailValidateWarningText.classList.add('show');
-				sendBtn.classList.add('warning');
-				warningText.classList.add('active');
-			} else if (value !== '') {
-				warningText.classList.add('active');
+			const elements = [warningText, sendBtn, field, emailValidateWarningText, emailField];
+			if (value === '' || !validateEmail(emailValue)) {
+				elements.forEach((el) => el.classList.add('warning'))
+				warningText.textContent = 'Заполните все поля для регистрации корректно!';
+			} else {
+				elements.forEach((el) => el.classList.remove('warning'));
+				warningText.classList.add('warning');
 				warningText.textContent = 'Спасибо за обращение!';
-				emailField.classList.remove('warning');
-				emailValidateWarningText.classList.remove('show');
-				sendBtn.classList.remove('warning');
+				emailValidateWarningText.classList.remove('warning');
 				field.value = '';
 			}
 		}
-	});
-
+	})
 
 });

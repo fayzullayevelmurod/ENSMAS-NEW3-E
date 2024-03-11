@@ -6,6 +6,13 @@
 	justify-content: space-between;
 	padding: 4.3125rem 0 11.875rem;
 
+	&-logo {
+		img {
+			width: 14.125rem;
+			height: 3.625rem;
+		}
+	}
+
 	.btn {
 		@include mixin.btn($font-size: 1.3125rem, $width: 14.9375rem, $height: 3.25rem, $line-height: 3.25rem)
 	}

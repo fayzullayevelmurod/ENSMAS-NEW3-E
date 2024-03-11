@@ -118,6 +118,17 @@ li {
     line-height: 1.5625rem !important;
   }
 }
+@media screen and (min-width: 1920px) {
+  .hero-slider__info-img {
+    max-width: 26.6875rem;
+    width: 100%;
+    height: 26.6875rem;
+  }
+  .hero-slider__info-img img {
+    width: 100%;
+    height: 100%;
+  }
+}
 @media (min-width: 2000px) {
   html {
     font-size: 18px;
@@ -171,6 +182,9 @@ li {
 @media (min-width: 3000px) {
   html {
     font-size: 28px;
+  }
+  .hero::before {
+    bottom: -11.0625rem !important;
   }
 }
 @media (min-width: 3100px) {
@@ -240,6 +254,10 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 4.3125rem 0 11.875rem;
+}
+.header-logo img {
+  width: 14.125rem;
+  height: 3.625rem;
 }
 .header .btn {
   font-size: 1.3125rem;
@@ -516,7 +534,7 @@ body {
   }
 }
 .lasted-news {
-  padding-top: 12.5rem;
+  padding-top: 5rem;
   text-align: center;
   color: #F2F2F2;
   padding-bottom: 8.75rem;
@@ -529,7 +547,7 @@ body {
   width: 100%;
   height: 100%;
   top: 45%;
-  left: -44.9375rem;
+  left: -35.9375rem;
   opacity: 0.026875rem;
   transform: rotate(14.76deg);
   background: url(../../images/gradient-bg.webp) no-repeat;
@@ -659,7 +677,7 @@ body {
   }
 }
 .advantages {
-  padding-bottom: 11.0625rem;
+  padding-bottom: 1rem;
   position: relative;
   z-index: 10;
 }
@@ -757,6 +775,7 @@ body {
   flex-direction: row;
   bottom: var(--swiper-pagination-bottom, 5.9375rem);
   left: 9.6875rem;
+  width: fit-content;
 }
 .characteristics-slider__box .swiper-pagination-bullet:first-child.swiper-pagination-bullet-active {
   border-color: #BCAB8B;
@@ -1380,7 +1399,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: all 0.1s linear;
   display: none;
   z-index: 999;
   background: url(../../images/modal-bg.svg) no-repeat;
@@ -1464,6 +1482,11 @@ body {
 .modal input[type=email].warning::placeholder {
   color: #FC403A;
 }
+.modal #name.warning::placeholder,
+.modal #phone.warning::placeholder,
+.modal #company.warning::placeholder {
+  color: #FC403A;
+}
 .modal textarea {
   height: 15.6875rem;
   resize: none;
@@ -1499,7 +1522,7 @@ body {
 .modal .email-box .validate-info span {
   display: inline-block;
 }
-.modal .email-box .validate-info.show {
+.modal .email-box .validate-info.warning {
   display: flex;
 }
 .modal .send-btn {
@@ -1525,7 +1548,7 @@ body {
   padding-top: 2.8125rem;
   text-align: center;
 }
-.modal .warning-text.active {
+.modal .warning-text.warning {
   display: block;
 }
 
