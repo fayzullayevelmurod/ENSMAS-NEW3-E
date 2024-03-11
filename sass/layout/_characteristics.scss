@@ -213,25 +213,8 @@
 
 	.characteristics {
 
-		// .swiper {
-		// 	width: 100%;
-		// }
-		.btn-hidde {
-			display: block;
-			position: absolute;
-			top: 19%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transform: translateY(-50%);
-		}
-
 		&-slider__box {
 			position: relative;
-		}
-
-		.swiper-btns {
-			display: none !important;
 		}
 
 		.title-text {
@@ -339,8 +322,105 @@
 	display: none;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 960px) {
+	.characteristics .swiper-slide__box {
+		gap: 1.6rem;
+	}
+
+	.characteristics .swiper-slide__box h4 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+		padding-bottom: 5px;
+	}
+
+	.characteristics-slider__info {
+		font-size: 15px;
+		line-height: 29px;
+	}
+
+	.characteristics-slider__content .btn {
+		margin-top: 2rem;
+	}
+
+	.characteristics .swiper-btns {
+		display: none !important;
+	}
+
 	.characteristics {
+		.btn-hidde {
+			display: block;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			// transform: translateY(-50%);
+			top: auto;
+			bottom: 0;
+			margin: 0;
+		}
+
+		.swiper {
+			padding-bottom: 61px;
+		}
+
+		&-slider__box {
+			padding-bottom: 3rem;
+		}
+
+		.swiper-pagination {
+			left: 17%;
+		}
+
+		.swiper-pagination-bullet::before {
+			top: 53%;
+			left: 47%;
+		}
+	}
+
+	.characteristics-box__content p.first {
+		top: 26%;
+		left: 12%;
+	}
+
+	.characteristics-box__content p.second {
+		top: 16%;
+		right: 5%;
+	}
+
+	.characteristics-box__content p.three {
+		bottom: 18%;
+		left: 15%;
+	}
+
+	.characteristics-box__content p.four {
+		right: 0%;
+		bottom: 16%;
+	}
+
+	.characteristics-box {
+		background-position: center 17.75rem;
+	}
+}
+
+@media screen and (max-width: 48rem) {
+
+	.characteristics .swiper {
+		padding-bottom: 0;
+	}
+
+	.characteristics {
+		padding-top: 92px;
+
+		.btn-hidde {
+			display: block;
+			position: absolute;
+			top: 19%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translateY(-50%);
+		}
+
 		&-box {
 			padding: 7.125rem 1.875rem 8.5625rem 1.875rem;
 			background: none;
@@ -421,6 +501,7 @@
 
 		.characteristics-slider__box .swiper-pagination-bullet::before {
 			left: 48%;
+			top: 50%;
 		}
 
 		.characteristics-slider__box .swiper-btns {

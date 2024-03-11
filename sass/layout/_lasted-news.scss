@@ -97,6 +97,14 @@
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.lasted-news__btns a:nth-child(2) {
+		font-size: 18px;
+		height: 60px;
+		line-height: 60px;
+	}
+}
+
 @media screen and (max-width: 48rem) {
 	.lasted-news {
 		padding-top: 1.25rem;
@@ -160,5 +168,4 @@
 			width: 48.5%;
 		}
 	}
-
 }

@@ -45,6 +45,17 @@
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.advantages-boxes {
+		row-gap: 1.5rem;
+	}
+
+	.advantages-box__info {
+		max-width: 15rem;
+		font-size: 1rem;
+	}
+}
+
 @media screen and (max-width: 48rem) {
 	.advantages {
 		.title-text {

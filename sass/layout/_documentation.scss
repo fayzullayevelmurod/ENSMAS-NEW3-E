@@ -79,6 +79,17 @@
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.documentation-boxes {
+		padding: 4.25rem 3.375rem 0 3.375rem;
+	}
+
+	.documentation .title-text {
+		top: 4.125rem;
+		left: 4.8125rem;
+	}
+}
+
 @media screen and (max-width: 48rem) {
 	.documentation {
 		padding-bottom: 3.6875rem;

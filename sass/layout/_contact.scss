@@ -90,6 +90,21 @@
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.contact-adres__phone a {
+		font-size: 16px;
+		white-space: nowrap;
+	}
+
+	.contact-adres__info {
+		font-size: 16px;
+	}
+
+	.contact-adres {
+		padding-left: 4rem;
+	}
+}
+
 @media screen and (max-width: 48rem) {
 	.contact {
 		&-boxes {

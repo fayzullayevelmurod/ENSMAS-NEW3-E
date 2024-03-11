@@ -44,6 +44,12 @@
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.where-buy__boxes {
+		overflow-x: auto;
+	}
+}
+
 @media screen and (max-width: 48rem) {
 	.where-buy {
 		padding-bottom: 6.0625rem;

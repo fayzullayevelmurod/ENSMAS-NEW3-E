@@ -22,6 +22,8 @@
 	}
 }
 
+
+
 @media screen and (max-width: 90rem) {
 	.header {
 		padding-bottom: 5.9375rem;
@@ -36,6 +38,23 @@
 		.btn {
 			@include mixin.btn($font-size: 1.0625rem, $width: 12.1875rem, $height: 2.625rem, $line-height: 2.625rem)
 		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.header {
+		padding-top: 2.3125rem;
+	}
+
+	.header .header-logo img {
+		width: 7.75rem;
+		height: 2.5rem;
+	}
+
+	.header .btn {
+		font-size: .925rem;
+		width: 11.1875rem;
+		height: 2.625rem;
 	}
 }
 
