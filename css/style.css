@@ -1420,9 +1420,10 @@ body {
   height: 100%;
   display: none;
   z-index: 999;
-  background: url(../../images/modal-bg.webp) no-repeat;
+  background: #020917;
   background-size: cover;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .modal-title {
   -webkit-background-clip: text;
@@ -1450,6 +1451,33 @@ body {
   flex-direction: column;
   background: rgba(185, 185, 185, 0.1019607843);
   border-radius: 1.25rem;
+  z-index: 10;
+}
+.modal-dialog::after {
+  content: "";
+  position: absolute;
+  top: 22%;
+  right: 11%;
+  opacity: 55%;
+  width: 18.75rem;
+  height: 18.75rem;
+  filter: blur(6.25rem);
+  background: linear-gradient(180deg, #5DF7EE 0%, #5174F0 100%);
+  z-index: -1;
+}
+.modal-dialog::before {
+  content: "";
+  position: absolute;
+  bottom: -16%;
+  left: -8%;
+  opacity: 50%;
+  width: 46.66375rem;
+  height: 56.56rem;
+  transform: rotate(20deg);
+  filter: blur(6.25rem);
+  background: url(../../images/modal-gradient.svg) no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 .modal-close__btn {
   position: absolute;
@@ -1584,6 +1612,14 @@ body {
     padding: 4.0625rem 0 1.6875rem 0;
     width: 90%;
     margin-top: 0;
+  }
+  .modal-dialog::before {
+    display: none;
+  }
+  .modal-dialog::after {
+    right: auto;
+    left: -59%;
+    opacity: 12%;
   }
   .modal-title {
     font-size: 1.5625rem;
