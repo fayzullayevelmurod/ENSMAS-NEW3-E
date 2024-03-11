@@ -763,6 +763,10 @@ body {
   width: 94%;
   margin: 0;
 }
+.characteristics-child__swiper {
+  width: 477px;
+  margin: 0;
+}
 .characteristics-slider__box {
   border-radius: 2.5rem;
   padding: 13.125rem 3.8125rem 0 9rem;
@@ -800,13 +804,6 @@ body {
 }
 .characteristics-slider__box .swiper-pagination-bullet:first-child.active {
   border-color: #BCAB8B;
-}
-.characteristics-slider__box .img-wrapper img {
-  display: none;
-  animation: fade 0.3s linear;
-}
-.characteristics-slider__box .img-wrapper img.active {
-  display: block;
 }
 @keyframes fade {
   0% {
@@ -921,9 +918,25 @@ body {
     left: 10%;
   }
 }
+.btn-hidde {
+  display: none;
+}
+
 @media screen and (max-width: 90rem) {
-  .characteristics .swiper {
-    width: 100%;
+  .characteristics .btn-hidde {
+    display: block;
+    position: absolute;
+    top: 19%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+  }
+  .characteristics-slider__box {
+    position: relative;
+  }
+  .characteristics .swiper-btns {
+    display: none !important;
   }
   .characteristics .title-text {
     left: 13%;
@@ -1130,10 +1143,18 @@ body {
   .characteristics .characteristics-box img {
     padding: 0;
   }
+  .characteristics-child__swiper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 422px) {
   .characteristics-slider__box .swiper-pagination {
     bottom: var(--swiper-pagination-bottom, 22rem) !important;
+  }
+  .swiper-pagination-bullet::before {
+    top: 54% !important;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1146,6 +1167,13 @@ body {
     bottom: var(--swiper-pagination-bottom, 22rem) !important;
   }
 }
+.characteristics-child__swiper {
+  user-select: none;
+}
+.characteristics-child__swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
+
 .documentation {
   padding-bottom: 9.75rem;
 }
@@ -1744,6 +1772,9 @@ body {
 .swiper .swiper-vertical > .swiper-pagination-bullets {
   top: 5.9375rem;
   right: 0;
+}
+.swiper .swiper-pagination-bullet {
+  cursor: pointer;
 }
 .swiper-button-next:after, .swiper-button-prev:after {
   display: none;

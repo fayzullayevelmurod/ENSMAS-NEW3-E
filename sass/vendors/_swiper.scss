@@ -38,6 +38,10 @@
 		right: 0;
 	}
 
+	.swiper-pagination-bullet {
+		cursor: pointer;
+	}
+
 	&-button-next:after,
 	&-button-prev:after {
 		display: none;

@@ -30,45 +30,48 @@ document.addEventListener('DOMContentLoaded', () => {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		// mousewheel: false,
-		// keyboard: false,
 		spaceBetween: 60,
 		loop: false,
 		speed: 900,
 	});
 
-	// characteristics-parent swiper
 	var swiper = new Swiper(".characteristics-parent__swiper", {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		paginationClickable: true,
 		spaceBetween: 30,
 		loop: true,
 		speed: 900,
+		allowTouchMove: false,
 	});
 
 	let slidesItems = document.querySelectorAll('.characteristics-parent__swiper .swiper-slide');
 
 	slidesItems.forEach((item) => {
-		let images = item.querySelectorAll('.img-wrapper img');
 		let paginations = item.querySelectorAll('.swiper-pagination-bullet');
-
-		paginations.forEach((bullet, bulletIdx) => {
-			bullet.addEventListener('click', () => {
-				paginations.forEach(el => {
-					el.classList.remove('active');
-				})
-				bullet.classList.add('active');
-
-				images.forEach(img => {
-					img.classList.remove('active');
-				})
-				images[bulletIdx].classList.add('active');
-			})
+		let childSlider = item.querySelector('.characteristics-child__swiper');
+		let slider = new Swiper(childSlider, {
+			slidesPerView: 1,
+			nested: true,
+			speed: 0,
+			effect: "fade"
 		})
 
+		slider.on('slideChange', function (e) {
+			paginations.forEach((bullet, bullteIdx) => {
+				if (bullteIdx !== slider.activeIndex) {
+					bullet.classList.remove('active');
+				} else {
+					bullet.classList.add('active');
+				}
+			})
+		})
+		paginations.forEach((bullet, bulletIdx) => {
+			bullet.addEventListener('click', () => {
+				slider.slideTo(bulletIdx);
+			})
+		})
 	})
 
 	// modal
