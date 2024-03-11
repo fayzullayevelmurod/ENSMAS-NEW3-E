@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		e.preventDefault();
 
 		const formFields = ['name', 'phone', 'email', 'company'];
-		const emailValue = emailField.value.trim();
+
 
 		for (let i = 0; i < formFields.length; i++) {
 			const field = document.getElementById(formFields[i]);
 			const value = field.value.trim();
 
 			const elements = [warningText, sendBtn, field, emailValidateWarningText, emailField];
-			if (value === '' || !validateEmail(emailValue)) {
+			if (value === '') {
 				elements.forEach((el) => el.classList.add('warning'))
 				warningText.textContent = 'Заполните все поля для регистрации корректно!';
 			} else {
@@ -118,7 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
 				field.value = '';
 				document.querySelector('textarea').value = '';
 			}
+
 		}
 	})
+
+	emailField.addEventListener('input', function () {
+		const emailValue = emailField.value.trim();
+		if (validateEmail(emailValue)) {
+			emailField.classList.remove('warning');
+			emailValidateWarningText.classList.remove('warning');
+		} else {
+			emailValidateWarningText.classList.add('warning');
+			// emailValidateWarningText.textContent = 'Введите корректный email.';
+		}
+	});
 
 });
