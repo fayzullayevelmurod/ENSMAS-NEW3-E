@@ -67,7 +67,7 @@
 			height: 56.56rem;
 			transform: rotate(20deg);
 			filter: blur(6.25rem);
-			background: url(../../images/modal-gradient.svg) no-repeat;
+			background: url(../images/modal-gradient.svg) no-repeat;
 			background-size: cover;
 			z-index: -1;
 		}
@@ -215,7 +215,7 @@
 
 @media screen and (max-width: 48rem) {
 	.modal {
-		background: url(../../images/media-modal-bg.webp) no-repeat;
+		background: url(../images/media-modal-bg.webp) no-repeat;
 		background-size: cover;
 	}
 

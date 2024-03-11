@@ -17,7 +17,7 @@
 		border-radius: 2.5rem;
 		padding: 13.125rem 3.8125rem 0 9rem;
 		position: relative;
-		background: url(../../images/slider-bg.webp) no-repeat;
+		background: url(../images/slider-bg.webp) no-repeat;
 		background-size: 100% 100%;
 
 		&::before {
@@ -147,7 +147,7 @@
 	&-box {
 		position: relative;
 		padding: 20.4375rem 0 19.6875rem 0;
-		background: url(../../images/charackter-bg.svg) no-repeat;
+		background: url(../images/charackter-bg.svg) no-repeat;
 		background-size: 111%;
 		background-position: center 9.6875rem;
 
@@ -454,7 +454,7 @@
 		}
 
 		&-slider__box {
-			background-image: url(../../images/media-slider-bg.webp);
+			background-image: url(../images/media-slider-bg.webp);
 			padding: 6rem 1.375rem 1.6875rem 2.125rem;
 		}
 
